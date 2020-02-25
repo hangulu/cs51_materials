@@ -100,7 +100,7 @@ An invariant is a condition that is known to be true, but that is not necessaril
 
 Now, let's do some error analysis.
 
-**Exercise 4:** What would happen if you tried to run the following code after defining color label as above?
+**Exercise 4:** What would happen if you tried to run the following code after defining color label as above and color as in lab?
 
 ```ocaml
 let my_color : color = Simple Pink ;;
