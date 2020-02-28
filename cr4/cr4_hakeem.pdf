@@ -1,0 +1,484 @@
+%PDF-1.3
+1 0 obj
+<< /Type /Catalog
+/Outlines 2 0 R
+/Pages 3 0 R >>
+endobj
+2 0 obj
+<< /Type /Outlines /Count 0 >>
+endobj
+3 0 obj
+<< /Type /Pages
+/Kids [6 0 R
+13 0 R
+15 0 R
+17 0 R
+]
+/Count 4
+/Resources <<
+/ProcSet 4 0 R
+/Font << 
+/F1 8 0 R
+/F2 9 0 R
+/F3 10 0 R
+>>
+>>
+/MediaBox [0.000 0.000 595.280 841.890]
+ >>
+endobj
+4 0 obj
+[/PDF /Text ]
+endobj
+5 0 obj
+<<
+/Creator (DOMPDF)
+/CreationDate (D:20200228021238+00'00')
+/ModDate (D:20200228021238+00'00')
+>>
+endobj
+6 0 obj
+<< /Type /Page
+/Parent 3 0 R
+/Annots [ 11 0 R ]
+/Contents 7 0 R
+>>
+endobj
+7 0 obj
+<<
+/Length 6909 >>
+stream
+
+0.000 0.000 0.000 rg
+BT 34.016 768.985 Td /F1 24.0 Tf  [(Code Review 4: February 28, 2019)] TJ ET
+BT 34.016 730.095 Td /F1 18.0 Tf  [(Modules, Functors, and Prioqueues)] TJ ET
+BT 34.016 699.473 Td /F2 12.0 Tf  [(Hakeem Angulu, )] TJ ET
+0.000 0.000 0.800 rg
+BT 119.000 699.473 Td /F2 12.0 Tf  [(hangulu@college.harvard.edu)] TJ ET
+0.000 0.000 0.800 RG
+0.6 w 0 J [  ] 0 d
+119.000 696.773 m 263.348 696.773 l S
+0.000 0.000 0.000 rg
+BT 34.016 671.279 Td /F1 14.0 Tf  [(Learning Goals)] TJ ET
+0.000 0.000 0.000 RG
+57.816 647.643 m 
+57.816 648.193 57.589 648.739 57.201 649.128 c
+56.812 649.516 56.266 649.743 55.716 649.743 c
+55.166 649.743 54.620 649.516 54.231 649.128 c
+53.842 648.739 53.616 648.193 53.616 647.643 c
+53.616 647.093 53.842 646.547 54.231 646.158 c
+54.620 645.769 55.166 645.543 55.716 645.543 c
+56.266 645.543 56.812 645.769 57.201 646.158 c
+57.589 646.547 57.816 647.093 57.816 647.643 c f
+BT 64.016 644.538 Td /F2 12.0 Tf  [(Understand why we use modules)] TJ ET
+57.816 633.387 m 
+57.816 633.937 57.589 634.483 57.201 634.872 c
+56.812 635.260 56.266 635.487 55.716 635.487 c
+55.166 635.487 54.620 635.260 54.231 634.872 c
+53.842 634.483 53.616 633.937 53.616 633.387 c
+53.616 632.837 53.842 632.291 54.231 631.902 c
+54.620 631.513 55.166 631.287 55.716 631.287 c
+56.266 631.287 56.812 631.513 57.201 631.902 c
+57.589 632.291 57.816 632.837 57.816 633.387 c f
+BT 64.016 630.282 Td /F2 12.0 Tf  [(Understand the difference between a module's type and its implementation)] TJ ET
+57.816 619.131 m 
+57.816 619.681 57.589 620.227 57.201 620.616 c
+56.812 621.004 56.266 621.231 55.716 621.231 c
+55.166 621.231 54.620 621.004 54.231 620.616 c
+53.842 620.227 53.616 619.681 53.616 619.131 c
+53.616 618.581 53.842 618.035 54.231 617.646 c
+54.620 617.257 55.166 617.031 55.716 617.031 c
+56.266 617.031 56.812 617.257 57.201 617.646 c
+57.589 618.035 57.816 618.581 57.816 619.131 c f
+BT 64.016 616.026 Td /F2 12.0 Tf  [(Relate functors to functions)] TJ ET
+57.816 604.875 m 
+57.816 605.425 57.589 605.971 57.201 606.360 c
+56.812 606.748 56.266 606.975 55.716 606.975 c
+55.166 606.975 54.620 606.748 54.231 606.360 c
+53.842 605.971 53.616 605.425 53.616 604.875 c
+53.616 604.325 53.842 603.779 54.231 603.390 c
+54.620 603.001 55.166 602.775 55.716 602.775 c
+56.266 602.775 56.812 603.001 57.201 603.390 c
+57.589 603.779 57.816 604.325 57.816 604.875 c f
+BT 64.016 601.770 Td /F2 12.0 Tf  [(Create and understand the use of priority queues)] TJ ET
+34.016 586.919 m 561.264 586.919 l 560.514 586.169 l 34.766 586.169 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+34.016 585.419 m 561.264 585.419 l 560.514 586.169 l 34.766 586.169 l  f
+561.264 586.919 m 561.264 585.419 l 560.514 586.169 l 560.514 586.169 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+34.016 586.919 m 34.016 585.419 l 34.766 586.169 l 34.766 586.169 l  f
+BT 34.016 560.075 Td /F1 14.0 Tf  [(Logistical Notes)] TJ ET
+57.816 536.439 m 
+57.816 536.989 57.589 537.535 57.201 537.924 c
+56.812 538.313 56.266 538.539 55.716 538.539 c
+55.166 538.539 54.620 538.313 54.231 537.924 c
+53.842 537.535 53.616 536.989 53.616 536.439 c
+53.616 535.889 53.842 535.343 54.231 534.954 c
+54.620 534.566 55.166 534.339 55.716 534.339 c
+56.266 534.339 56.812 534.566 57.201 534.954 c
+57.589 535.343 57.816 535.889 57.816 536.439 c f
+BT 64.016 533.334 Td /F2 12.0 Tf  [(Midterm 1 is next Monday from 7:40 pm - 9:10 pm. )] TJ ET
+0.48 w 1 J 1 j
+87.816 522.183 m 
+87.816 522.733 87.589 523.279 87.201 523.668 c
+86.812 524.057 86.266 524.283 85.716 524.283 c
+85.166 524.283 84.620 524.057 84.231 523.668 c
+83.842 523.279 83.616 522.733 83.616 522.183 c
+83.616 521.633 83.842 521.087 84.231 520.698 c
+84.620 520.310 85.166 520.083 85.716 520.083 c
+86.266 520.083 86.812 520.310 87.201 520.698 c
+87.589 521.087 87.816 521.633 87.816 522.183 c s
+BT 94.016 519.078 Td /F2 12.0 Tf  [(practice, practice, practice)] TJ ET
+0.48 w 1 J 1 j
+87.816 507.927 m 
+87.816 508.477 87.589 509.023 87.201 509.412 c
+86.812 509.801 86.266 510.027 85.716 510.027 c
+85.166 510.027 84.620 509.801 84.231 509.412 c
+83.842 509.023 83.616 508.477 83.616 507.927 c
+83.616 507.377 83.842 506.831 84.231 506.442 c
+84.620 506.054 85.166 505.827 85.716 505.827 c
+86.266 505.827 86.812 506.054 87.201 506.442 c
+87.589 506.831 87.816 507.377 87.816 507.927 c s
+BT 94.016 504.822 Td /F2 12.0 Tf  [(the best thing you can do is work on the labs \(redo them if possible\), then the exercises in the )] TJ ET
+BT 94.016 490.566 Td /F2 12.0 Tf  [(book, then the problem sets)] TJ ET
+34.016 475.715 m 561.264 475.715 l 560.514 474.965 l 34.766 474.965 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+34.016 474.215 m 561.264 474.215 l 560.514 474.965 l 34.766 474.965 l  f
+561.264 475.715 m 561.264 474.215 l 560.514 474.965 l 560.514 474.965 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+34.016 475.715 m 34.016 474.215 l 34.766 474.965 l 34.766 474.965 l  f
+BT 34.016 448.872 Td /F1 14.0 Tf  [(Modules)] TJ ET
+BT 34.016 422.131 Td /F2 12.0 Tf  [(A module is a package of types and values \(eg. variables and functions\). Modules have type signatures, )] TJ ET
+BT 34.016 407.875 Td /F2 12.0 Tf  [(which are defined separately from the module’s implementation. Technically it isn’t necessary to define a )] TJ ET
+BT 34.016 393.619 Td /F2 12.0 Tf  [(module’s type signature, but it is often helpful to do so. The syntax for defining a module type signature and )] TJ ET
+BT 34.016 379.363 Td /F2 12.0 Tf  [(a module implementation is shown below.)] TJ ET
+BT 34.016 354.551 Td /F3 12.0 Tf  [(module type Example_Signature =)] TJ ET
+BT 34.016 342.101 Td /F3 12.0 Tf  [(  sig)] TJ ET
+BT 34.016 329.651 Td /F3 12.0 Tf  [(    type weird_type)] TJ ET
+BT 34.016 317.201 Td /F3 12.0 Tf  [(    type weird_type_2)] TJ ET
+BT 34.016 304.751 Td /F3 12.0 Tf  [(    val x : weird_type)] TJ ET
+BT 34.016 292.300 Td /F3 12.0 Tf  [(    val y : float)] TJ ET
+BT 34.016 279.850 Td /F3 12.0 Tf  [(    val flip : float -> float)] TJ ET
+BT 34.016 267.400 Td /F3 12.0 Tf  [(end)] TJ ET
+BT 34.016 242.950 Td /F3 12.0 Tf  [(module Example_Implementation : \(Example_Signature with type weird_type = int\) =)] TJ ET
+BT 34.016 230.499 Td /F3 12.0 Tf  [(  struct)] TJ ET
+BT 34.016 218.049 Td /F3 12.0 Tf  [(    type weird_type = int)] TJ ET
+BT 34.016 205.599 Td /F3 12.0 Tf  [(    type weird_type_2 = int)] TJ ET
+BT 34.016 193.149 Td /F3 12.0 Tf  [(    type weird_type_3 = int)] TJ ET
+BT 34.016 180.698 Td /F3 12.0 Tf  [(    let x = 0)] TJ ET
+BT 34.016 168.248 Td /F3 12.0 Tf  [(    let y = 0.)] TJ ET
+BT 34.016 155.798 Td /F3 12.0 Tf  [(    let z = 3.6)] TJ ET
+BT 34.016 143.348 Td /F3 12.0 Tf  [(    let flip l = l +. z)] TJ ET
+BT 34.016 130.897 Td /F3 12.0 Tf  [(end)] TJ ET
+BT 34.016 105.003 Td /F1 12.0 Tf  [(Exercise 1)] TJ ET
+BT 86.336 105.003 Td /F2 12.0 Tf  [(: True or false: every type and value defined in the module type must be implemented in the )] TJ ET
+BT 34.016 90.747 Td /F2 12.0 Tf  [(module implementation.)] TJ ET
+endstream
+endobj
+8 0 obj
+<< /Type /Font
+/Subtype /Type1
+/Name /F1
+/BaseFont /Times-Bold
+/Encoding /WinAnsiEncoding
+>>
+endobj
+9 0 obj
+<< /Type /Font
+/Subtype /Type1
+/Name /F2
+/BaseFont /Times-Roman
+/Encoding /WinAnsiEncoding
+>>
+endobj
+10 0 obj
+<< /Type /Font
+/Subtype /Type1
+/Name /F3
+/BaseFont /Courier
+/Encoding /WinAnsiEncoding
+>>
+endobj
+11 0 obj
+<< /Type /Annot
+/Subtype /Link
+/A 12 0 R
+/Border [0 0 0]
+/H /I
+/Rect [ 118.9997 698.3935 263.3477 710.2735 ]
+>>
+endobj
+12 0 obj
+<< /Type /Action
+/S /URI
+/URI (mailto:hangulu@college.harvard.edu)
+>>
+endobj
+13 0 obj
+<< /Type /Page
+/Parent 3 0 R
+/Contents 14 0 R
+>>
+endobj
+14 0 obj
+<<
+/Length 4867 >>
+stream
+
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+0.48 w 1 J 1 j
+BT 34.016 784.469 Td /F1 12.0 Tf  [(Exercise 2)] TJ ET
+BT 86.336 784.469 Td /F2 12.0 Tf  [(: True or false: you cannot implement types and values not defined in the module type in the )] TJ ET
+BT 34.016 770.213 Td /F2 12.0 Tf  [(module implementation.)] TJ ET
+BT 34.016 743.957 Td /F2 12.0 Tf  [(Pay note to the type signature of )] TJ ET
+BT 192.332 743.957 Td /F3 12.0 Tf  [(Example_Implementation)] TJ ET
+BT 350.732 743.957 Td /F2 12.0 Tf  [(. We specify that it is of type )] TJ ET
+BT 34.016 729.701 Td /F3 12.0 Tf  [(Example_Signature with type weird_type = int)] TJ ET
+BT 350.816 729.701 Td /F2 12.0 Tf  [(. By specifying this, now whenever we )] TJ ET
+BT 34.016 715.445 Td /F2 12.0 Tf  [(refer to )] TJ ET
+BT 71.996 715.445 Td /F3 12.0 Tf  [(Example_Implementation.weird_type)] TJ ET
+BT 309.596 715.445 Td /F2 12.0 Tf  [( outside of the module’s definition, OCaml knows )] TJ ET
+BT 34.016 701.189 Td /F2 12.0 Tf  [(that we mean )] TJ ET
+BT 101.000 701.189 Td /F3 12.0 Tf  [(int)] TJ ET
+BT 122.600 701.189 Td /F2 12.0 Tf  [(. This is not the same for )] TJ ET
+BT 244.592 701.189 Td /F3 12.0 Tf  [(weird_type_2)] TJ ET
+BT 330.992 701.189 Td /F2 12.0 Tf  [(. If we refer to )] TJ ET
+BT 34.016 686.933 Td /F3 12.0 Tf  [(Example_Implementation.weird_type_2)] TJ ET
+BT 286.016 686.933 Td /F2 12.0 Tf  [(, OCaml does not know that we mean )] TJ ET
+BT 469.664 686.933 Td /F3 12.0 Tf  [(int)] TJ ET
+BT 491.264 686.933 Td /F2 12.0 Tf  [(.)] TJ ET
+BT 34.016 660.677 Td /F2 12.0 Tf  [(This is a key feature of module implementations that you saw in lab, and that will be useful for the problem )] TJ ET
+BT 34.016 646.421 Td /F2 12.0 Tf  [(set. It allows the developer to mask the inner workings of the implementation for security reasons.)] TJ ET
+BT 34.016 620.165 Td /F1 12.0 Tf  [(Exercise 3)] TJ ET
+BT 86.336 620.165 Td /F2 12.0 Tf  [(: What would the following return when run in an OCaml repl after defining the module above?)] TJ ET
+BT 34.016 595.354 Td /F3 12.0 Tf  [(>> Example_Implementation.x ;;)] TJ ET
+BT 34.016 582.904 Td /F3 12.0 Tf  [(>> Example_Implementation.y ;;)] TJ ET
+BT 34.016 570.454 Td /F3 12.0 Tf  [(>> Example_Implementation.z ;;)] TJ ET
+BT 34.016 558.003 Td /F3 12.0 Tf  [(>> Example_Implementation.flip 0.4 ;;)] TJ ET
+BT 34.016 528.148 Td /F1 12.0 Tf  [(Files as Modules)] TJ ET
+BT 34.016 497.932 Td /F2 12.0 Tf  [(How do we build large projects? Hopefully as you've seen, you can input the following into utop.)] TJ ET
+BT 34.016 473.121 Td /F3 12.0 Tf  [(\(* #mod_use "fibonacci.ml" *\))] TJ ET
+BT 34.016 460.671 Td /F3 12.0 Tf  [(module Fibonacci :)] TJ ET
+BT 34.016 448.221 Td /F3 12.0 Tf  [(  sig)] TJ ET
+BT 34.016 435.770 Td /F3 12.0 Tf  [(    type length = Infinite | Finite of int)] TJ ET
+BT 34.016 423.320 Td /F3 12.0 Tf  [(    type info = { name : string; length : length; inventor : string; })] TJ ET
+BT 34.016 410.870 Td /F3 12.0 Tf  [(    val name : string)] TJ ET
+BT 34.016 398.420 Td /F3 12.0 Tf  [(    val length : length)] TJ ET
+BT 34.016 385.969 Td /F3 12.0 Tf  [(    val inventor : string)] TJ ET
+BT 34.016 373.519 Td /F3 12.0 Tf  [(    val info : info)] TJ ET
+BT 34.016 361.069 Td /F3 12.0 Tf  [(    val eval : int -> int option)] TJ ET
+BT 34.016 348.619 Td /F3 12.0 Tf  [(    val exists : int -> bool)] TJ ET
+BT 34.016 336.168 Td /F3 12.0 Tf  [(  end)] TJ ET
+BT 34.016 310.274 Td /F2 12.0 Tf  [(Modules are an excellent way to build mechanics and abstract or package them for easy use. Data structures, )] TJ ET
+BT 34.016 296.018 Td /F2 12.0 Tf  [(objects, function collections, and more can all be built and abstracted and re-used as modules.)] TJ ET
+BT 34.016 265.802 Td /F1 12.0 Tf  [(Local Open)] TJ ET
+BT 34.016 237.030 Td /F3 12.0 Tf  [(let open Math in)] TJ ET
+BT 34.016 224.580 Td /F3 12.0 Tf  [(max\([cos\(pi\); sin\(pi\)]\) ;;)] TJ ET
+BT 34.016 198.685 Td /F2 12.0 Tf  [(You'll notice that these functions are written with parentheses to wrap the arguments. This is mainly to )] TJ ET
+BT 34.016 184.429 Td /F2 12.0 Tf  [(differentiate them from the builtin functions \(you can write them with or without the parentheses\). Used )] TJ ET
+BT 34.016 170.173 Td /F2 12.0 Tf  [(tastefully, this can make code cleaner but for the most part it might be easier to just open it globally or use )] TJ ET
+BT 34.016 155.917 Td /F2 12.0 Tf  [(dot notation.)] TJ ET
+BT 34.016 129.661 Td /F2 12.0 Tf  [(You can build large programs in OCaml across multiple files by using functions you develop as modules.)] TJ ET
+BT 34.016 99.445 Td /F1 12.0 Tf  [(Interfaces)] TJ ET
+BT 34.016 69.229 Td /F2 12.0 Tf  [(Let's talk through the implementation of )] TJ ET
+BT 230.168 69.229 Td /F3 12.0 Tf  [(IntListStack)] TJ ET
+BT 316.568 69.229 Td /F2 12.0 Tf  [(.)] TJ ET
+BT 34.016 44.418 Td /F3 12.0 Tf  [(module IntListStack =)] TJ ET
+BT 34.016 31.967 Td /F3 12.0 Tf  [(  struct)] TJ ET
+endstream
+endobj
+15 0 obj
+<< /Type /Page
+/Parent 3 0 R
+/Contents 16 0 R
+>>
+endobj
+16 0 obj
+<<
+/Length 5032 >>
+stream
+
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+0.48 w 1 J 1 j
+BT 34.016 797.914 Td /F3 12.0 Tf  [(    exception EmptyStack)] TJ ET
+BT 34.016 785.464 Td /F3 12.0 Tf  [(    type stack = int list)] TJ ET
+BT 34.016 773.014 Td /F3 12.0 Tf  [(    \(* Returns an empty stack *\))] TJ ET
+BT 34.016 760.563 Td /F3 12.0 Tf  [(    let empty \(\) : stack = [])] TJ ET
+BT 34.016 748.113 Td /F3 12.0 Tf  [(    \(* Add an element to the top of the stack *\))] TJ ET
+BT 34.016 735.663 Td /F3 12.0 Tf  [(    let push \(i : int\) \(s : stack\) : stack = i :: s)] TJ ET
+BT 34.016 723.213 Td /F3 12.0 Tf  [(    \(* Return the value of the topmost element on the stack *\))] TJ ET
+BT 34.016 710.762 Td /F3 12.0 Tf  [(    let top \(s : stack\) : int =)] TJ ET
+BT 34.016 698.312 Td /F3 12.0 Tf  [(      match s with)] TJ ET
+BT 34.016 685.862 Td /F3 12.0 Tf  [(      | hd :: tl -> hd)] TJ ET
+BT 34.016 673.412 Td /F3 12.0 Tf  [(      | _ -> raise EmptyStack)] TJ ET
+BT 34.016 660.961 Td /F3 12.0 Tf  [(    \(* Return a modified stack with the topmost element removed *\))] TJ ET
+BT 34.016 648.511 Td /F3 12.0 Tf  [(    let pop \(s : stack\) : stack =)] TJ ET
+BT 34.016 636.061 Td /F3 12.0 Tf  [(      match s with)] TJ ET
+BT 34.016 623.611 Td /F3 12.0 Tf  [(      | hd :: tl -> tl)] TJ ET
+BT 34.016 611.160 Td /F3 12.0 Tf  [(      | _ -> raise EmptyStack)] TJ ET
+BT 34.016 598.710 Td /F3 12.0 Tf  [(  end ;;)] TJ ET
+BT 34.016 572.815 Td /F2 12.0 Tf  [(We later defined the interface for this module in )] TJ ET
+BT 268.292 572.815 Td /F3 12.0 Tf  [(INT_STACK)] TJ ET
+BT 333.092 572.815 Td /F2 12.0 Tf  [(.)] TJ ET
+BT 34.016 548.004 Td /F3 12.0 Tf  [(module type INT_STACK =)] TJ ET
+BT 34.016 535.554 Td /F3 12.0 Tf  [(  sig)] TJ ET
+BT 34.016 523.103 Td /F3 12.0 Tf  [(    type stack)] TJ ET
+BT 34.016 510.653 Td /F3 12.0 Tf  [(    exception EmptyStack)] TJ ET
+BT 34.016 498.203 Td /F3 12.0 Tf  [(    val empty : unit -> stack)] TJ ET
+BT 34.016 485.753 Td /F3 12.0 Tf  [(    val push : int -> stack -> stack)] TJ ET
+BT 34.016 473.303 Td /F3 12.0 Tf  [(    val top : stack -> int)] TJ ET
+BT 34.016 460.852 Td /F3 12.0 Tf  [(    val pop : stack -> stack)] TJ ET
+BT 34.016 448.402 Td /F3 12.0 Tf  [(  end ;;)] TJ ET
+BT 34.016 422.507 Td /F2 12.0 Tf  [(How do we define a )] TJ ET
+BT 133.652 422.507 Td /F2 12.0 Tf  [(")] TJ ET
+BT 138.548 422.507 Td /F2 12.0 Tf  [(safe)] TJ ET
+BT 157.868 422.507 Td /F2 12.0 Tf  [(")] TJ ET
+BT 165.764 422.507 Td /F3 12.0 Tf  [(IntListStack)] TJ ET
+BT 252.164 422.507 Td /F2 12.0 Tf  [(?)] TJ ET
+BT 34.016 397.696 Td /F3 12.0 Tf  [(module SafeIntListStack = \(\) ;;)] TJ ET
+BT 34.016 371.801 Td /F2 12.0 Tf  [(How do we create a new stack? Use the functions specified in the interface.)] TJ ET
+BT 34.016 346.990 Td /F3 12.0 Tf  [(let safe_stack \(\) : SafeIntListStack.stack =)] TJ ET
+BT 34.016 334.539 Td /F3 12.0 Tf  [(   let open SafeIntListStack in)] TJ ET
+BT 34.016 322.089 Td /F3 12.0 Tf  [(   empty \(\) |> push 5 |> push 1 ;;)] TJ ET
+BT 34.016 296.194 Td /F1 12.0 Tf  [(Exercise 4)] TJ ET
+BT 86.336 296.194 Td /F2 12.0 Tf  [(: Say you're given the implementation of an int stack, as above. Write a function )] TJ ET
+BT 474.776 296.194 Td /F3 12.0 Tf  [(multi_stack)] TJ ET
+BT 34.016 281.938 Td /F2 12.0 Tf  [(that returns the first pair of consecutive elements in the stack if it exists, and throw an )] TJ ET
+BT 447.956 281.938 Td /F3 12.0 Tf  [(EmptyStack)] TJ ET
+BT 519.956 281.938 Td /F2 12.0 Tf  [( error )] TJ ET
+BT 34.016 267.682 Td /F2 12.0 Tf  [(otherwise.)] TJ ET
+BT 34.016 242.871 Td /F3 12.0 Tf  [(open SafeIntListStack)] TJ ET
+BT 34.016 230.421 Td /F3 12.0 Tf  [(let multi_stack \(s : stack\) : int * int =)] TJ ET
+BT 34.016 217.970 Td /F3 12.0 Tf  [(  failwith "multi_stack not implemented")] TJ ET
+34.016 203.480 m 561.264 203.480 l 560.514 202.730 l 34.766 202.730 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+34.016 201.980 m 561.264 201.980 l 560.514 202.730 l 34.766 202.730 l  f
+561.264 203.480 m 561.264 201.980 l 560.514 202.730 l 560.514 202.730 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+34.016 203.480 m 34.016 201.980 l 34.766 202.730 l 34.766 202.730 l  f
+BT 34.016 176.637 Td /F1 14.0 Tf  [(Functors)] TJ ET
+BT 34.016 149.896 Td /F2 12.0 Tf  [(Functors are objects in OCaml that take modules as arguments and return a new module. They are )] TJ ET
+BT 34.016 135.640 Td /F2 12.0 Tf  [(essentially functions for modules. An example of a functor )] TJ ET
+BT 319.304 135.640 Td /F3 12.0 Tf  [(Inc)] TJ ET
+BT 340.904 135.640 Td /F2 12.0 Tf  [( is shown below.)] TJ ET
+BT 34.016 110.829 Td /F3 12.0 Tf  [(\(* Define a new module signature *\))] TJ ET
+BT 34.016 98.378 Td /F3 12.0 Tf  [(module type Value =)] TJ ET
+BT 34.016 85.928 Td /F3 12.0 Tf  [(  sig)] TJ ET
+BT 34.016 73.478 Td /F3 12.0 Tf  [(    val x : int)] TJ ET
+BT 34.016 61.028 Td /F3 12.0 Tf  [(  end)] TJ ET
+BT 34.016 48.577 Td /F3 12.0 Tf  [(\(* define a new module called Value_Zero of type Value *\))] TJ ET
+BT 34.016 36.127 Td /F3 12.0 Tf  [(module Value_Zero : Value =)] TJ ET
+BT 34.016 23.677 Td /F3 12.0 Tf  [(  struct)] TJ ET
+endstream
+endobj
+17 0 obj
+<< /Type /Page
+/Parent 3 0 R
+/Contents 18 0 R
+>>
+endobj
+18 0 obj
+<<
+/Length 5247 >>
+stream
+
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+0.48 w 1 J 1 j
+BT 34.016 797.914 Td /F3 12.0 Tf  [(    let x = 0)] TJ ET
+BT 34.016 785.464 Td /F3 12.0 Tf  [(  end)] TJ ET
+BT 34.016 773.014 Td /F3 12.0 Tf  [(\(* Define a functor which takes a Value and returns a Value *\))] TJ ET
+BT 34.016 760.563 Td /F3 12.0 Tf  [(module Inc \(V: Value\) : Value =)] TJ ET
+BT 34.016 748.113 Td /F3 12.0 Tf  [(  struct)] TJ ET
+BT 34.016 735.663 Td /F3 12.0 Tf  [(    let x = V.x + 1)] TJ ET
+BT 34.016 723.213 Td /F3 12.0 Tf  [(  end)] TJ ET
+BT 34.016 710.762 Td /F3 12.0 Tf  [(\(* Use Inc to create new modules Value_One and Value_Two *\))] TJ ET
+BT 34.016 698.312 Td /F3 12.0 Tf  [(module Value_One = Inc \(Value_Zero\))] TJ ET
+BT 34.016 685.862 Td /F3 12.0 Tf  [(module Value_Two = Inc \(Value_One\))] TJ ET
+BT 34.016 659.967 Td /F1 12.0 Tf  [(Exercise 5)] TJ ET
+BT 86.336 659.967 Td /F2 12.0 Tf  [(: Similarly, define a functor Square_Value which takes a Value module as an argument and )] TJ ET
+BT 34.016 645.711 Td /F2 12.0 Tf  [(returns a new Value module whose x-value is the square of the given x-value. Example:)] TJ ET
+BT 34.016 620.900 Td /F3 12.0 Tf  [(# module New_Value = Square_Value \(Value_One\) ;;)] TJ ET
+BT 34.016 608.449 Td /F3 12.0 Tf  [(# New_Value.x ;;)] TJ ET
+BT 34.016 595.999 Td /F3 12.0 Tf  [(- : int = 4)] TJ ET
+BT 34.016 571.549 Td /F3 12.0 Tf  [(module Square_Value \(V : Value\) : Value =)] TJ ET
+34.016 557.059 m 561.264 557.059 l 560.514 556.309 l 34.766 556.309 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+34.016 555.559 m 561.264 555.559 l 560.514 556.309 l 34.766 556.309 l  f
+561.264 557.059 m 561.264 555.559 l 560.514 556.309 l 560.514 556.309 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+34.016 557.059 m 34.016 555.559 l 34.766 556.309 l 34.766 556.309 l  f
+BT 34.016 530.215 Td /F1 14.0 Tf  [(Priority Queues)] TJ ET
+BT 34.016 503.475 Td /F2 12.0 Tf  [(Priority Queues \(or prioqueues for short\) are data structures that allow you to insert elements and remove )] TJ ET
+BT 34.016 489.219 Td /F2 12.0 Tf  [(them based on their priority.)] TJ ET
+BT 34.016 462.963 Td /F2 12.0 Tf  [(The highest priority element will always be removed first, regardless of whether it was inserted after a lower )] TJ ET
+BT 34.016 448.707 Td /F2 12.0 Tf  [(priority element. We specify that if a new element has the same priority as an element already in the priority )] TJ ET
+BT 34.016 434.451 Td /F2 12.0 Tf  [(queue, then the new element is inserted into the queue after the element that was already there.)] TJ ET
+BT 34.016 408.195 Td /F2 12.0 Tf  [(For example, let’s say we’re inserting letters into a priority queue, where a letter’s position in the alphabet is )] TJ ET
+BT 34.016 393.939 Td /F2 12.0 Tf  [(its priority \(A comes before B\). If we inserted B, then C, then A, our priority queue would be: A, B, C.)] TJ ET
+BT 34.016 367.683 Td /F2 12.0 Tf  [(Some important functions for a Priority Queue are: - empty – returns an empty priority queue - is_empty – )] TJ ET
+BT 34.016 353.427 Td /F2 12.0 Tf  [(which returns true if a priority queue is empty and false otherwise - add – adds an element to a priority )] TJ ET
+BT 34.016 339.171 Td /F2 12.0 Tf  [(queue - take – returns the first element from a priority queue along with the priority queue minus the first )] TJ ET
+BT 34.016 324.915 Td /F2 12.0 Tf  [(element)] TJ ET
+BT 34.016 298.659 Td /F2 12.0 Tf  [(There are many ways to represent a priority queue. One such way is through a list: we store elements with )] TJ ET
+BT 34.016 284.403 Td /F2 12.0 Tf  [(higher priority at the front of the list and elements with lower priority at the end of the list.)] TJ ET
+BT 34.016 258.147 Td /F1 12.0 Tf  [(Exercise 6)] TJ ET
+BT 86.336 258.147 Td /F2 12.0 Tf  [(: Implement the addition function for an integer priority queue, represented by an int list, for )] TJ ET
+BT 34.016 243.891 Td /F2 12.0 Tf  [(whom the highest priority elements are the lowest in value.)] TJ ET
+BT 34.016 219.079 Td /F3 12.0 Tf  [(let add \(lst : int list\) \(el : int\) : int list =)] TJ ET
+BT 34.016 206.629 Td /F3 12.0 Tf  [(  failwith "add not yet implemented")] TJ ET
+34.016 192.139 m 561.264 192.139 l 560.514 191.389 l 34.766 191.389 l  f
+0.160 0.160 0.160 rg
+0.160 0.160 0.160 RG
+34.016 190.639 m 561.264 190.639 l 560.514 191.389 l 34.766 191.389 l  f
+561.264 192.139 m 561.264 190.639 l 560.514 191.389 l 560.514 191.389 l  f
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+34.016 192.139 m 34.016 190.639 l 34.766 191.389 l 34.766 191.389 l  f
+BT 34.016 167.234 Td /F2 12.0 Tf  [(The solutions to all of the above exercises will be available on Sunday at 10am to give you some time to )] TJ ET
+BT 34.016 152.978 Td /F2 12.0 Tf  [(work through them again on your own.)] TJ ET
+BT 34.016 126.722 Td /F2 12.0 Tf  [(For this and future code reviews, please do not hesitate to reach out to me with any questions or concerns. )] TJ ET
+BT 34.016 112.466 Td /F2 12.0 Tf  [(My email can be found at the top of this document. As with last week, when I circulate the solutions, I will )] TJ ET
+BT 34.016 98.210 Td /F2 12.0 Tf  [(also circulate a form for you all to provide feedback on this code review, and I'll use that to tailor code )] TJ ET
+BT 34.016 83.954 Td /F2 12.0 Tf  [(reviews in the future.)] TJ ET
+endstream
+endobj
+xref
+0 19
+0000000000 65535 f 
+0000000009 00000 n 
+0000000074 00000 n 
+0000000120 00000 n 
+0000000316 00000 n 
+0000000345 00000 n 
+0000000459 00000 n 
+0000000541 00000 n 
+0000007502 00000 n 
+0000007610 00000 n 
+0000007719 00000 n 
+0000007825 00000 n 
+0000007953 00000 n 
+0000008039 00000 n 
+0000008104 00000 n 
+0000013024 00000 n 
+0000013089 00000 n 
+0000018174 00000 n 
+0000018239 00000 n 
+trailer
+<<
+/Size 19
+/Root 1 0 R
+/Info 5 0 R
+>>
+startxref
+23539
+%%EOF
