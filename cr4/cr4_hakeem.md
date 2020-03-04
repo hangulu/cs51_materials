@@ -161,7 +161,7 @@ let safe_stack () : SafeIntListStack.stack =
    empty () |> push 5 |> push 1 ;;  
 ```
 
-**Exercise 4**: Say you're given the implementation of an int stack, as above. Write a function `multi_stack` that returns the first pair of consecutive elements in the stack if it exists, and throw an `EmptyStack` error otherwise.
+**Exercise 4**: Say you're given the implementation of an int stack, as above. Write a function `multi_stack` that returns the first pair of consecutive equal elements in the stack if it exists, and throw an `EmptyStack` error otherwise.
 
 ```ocaml
 open SafeIntListStack
@@ -239,6 +239,4 @@ let add (lst : int list) (el : int) : int list =
 
 ---
 
-The solutions to all of the above exercises will be available on Sunday at 10am to give you some time to work through them again on your own.
-
-For this and future code reviews, please do not hesitate to reach out to me with any questions or concerns. My email can be found at the top of this document. As with last week, when I circulate the solutions, I will also circulate a form for you all to provide feedback on this code review, and I'll use that to tailor code reviews in the future.
+For this and future code reviews, please do not hesitate to reach out to me with any questions or concerns. My email can be found at the top of this document.
