@@ -269,6 +269,249 @@ module MakeDict (DA : DictArg) : (Dict with type key = DA.key and type v = DA.v)
   end
 ```
 
+___
+
+## Notes on Substitution Semantics
+
+---
+
+### Free Variables
+
+Variable occurrences can be said to be either free or bound. A bound occurrence of a variable falls within a construct (like a let expression or a function) that introduces that variable. Otherwise, the variable is free. In an expression like `x + 8`, for example, `x` is free; in an expression like `let x = 2 in x + 8`, `x` is bound by the let expression.
+
+```
+(* The set of free variables for an integer expression m is the empty set. *)
+FV(m) = ∅
+```
+
+* FV(3) = ∅
+* FV(-2) = ∅
+
+```
+(* The set of free variables for a variable is the set containing that variable. *)
+FV(x) = {x}
+```
+
+* FV(x) = {x}
+* FV(y) = {y}
+
+```
+(* The set of free variables for an addition expression P + Q is the union of the free variables of P and the free variables of Q. *)
+FV(P + Q) = FV(P) ∪ FV(Q)
+```
+
+* FV(x + 3) = {x}
+* FV(x + y) = {x, y}
+
+```
+(* The set of free variables for an function application P Q is the union of the free variables of P and the free variables of Q. *)
+FV(P Q) = FV(P) ∪ FV(Q)
+```
+
+* FV(f 2) = {f}
+* FV(f x) = {f, x}
+
+```
+(* The set of free variables for a function fun x -> P is the set of free variables of P, but not including x. *)
+(* This is because the function fun x -> P binds the variable x inside of P. *)
+FV(fun x -> P) = FV(P) - {x}
+```
+
+* FV(fun x -> x + 10) = ∅
+* FV(fun x -> x + y) = {y}
+
+```
+(* The set of free variables for a let expression `let x = P in Q` is the set of free variables of Q, but not including x, unioned with the set of free variables in P. *)
+(* This is because the let expression binds the variable x inside of Q. *)
+FV(let x = P in Q) = (FV(Q) - {x}) ∪ FV(P)
+```
+
+* FV(let x = 3 in x + 1) = ∅
+* FV(let x = 3 in x + y) = {y}
+* FV(let x = x + 2 in x + y) = {x, y}
+
+### Substitution
+
+The expression `E[x -> P]` substitutes free occurrences of `x` in the expression `E` with the expression `P`.
+
+```
+(* Substituting `x` for `P` in an integer expression leaves the expression unchanged. *)
+m[x -> P] = m (where m is an integer)
+```
+
+* 2[x -> 3] = 2
+* 5[x -> 5] = 5
+
+
+```
+(* Substituting `x` for `P` in a variable expression `x` results in `P`. *)
+x[x -> P] = P
+```
+
+* x[x -> 2] = 2
+* x[x -> 8] = 8
+
+```
+(* Substituting `x` for `P` in a variable expression `y` (a different variable) results in `y` left unchanged. *)
+y[x -> P] = y
+```
+
+* y[x -> 2] = y
+* y[x -> 8] = y
+
+```
+(* Substituting `x` for `P` in an addition expression `Q + R` requires substituting in both Q and R)
+(Q + R)[x -> P] = Q[x -> P] + R[x -> P]
+```
+
+* (x + 3)[x -> 2] = 2 + 3
+* (x + y)[x -> 2] = 2 + y
+
+```
+(* Substituting `x` for `P` in a function expression `fun x -> Q` leaves the function expression unchanged.*)
+(fun x -> Q)[x -> P] = fun x -> Q
+```
+
+* (fun x -> x)[x -> 2] = (fun x -> x)
+* (fun x -> x + 5)[x -> 10] = (fun x -> x + 5)
+
+```
+(* Substituting `x` for `P` in a function expression `fun y -> Q`
+ where `y` is not a free variable of `P` results in a substitution in `Q`.*)
+(fun y -> Q)[x -> P] = fun y -> Q[x -> P]
+(* where `x` and `y` are different variables and `y` is not in `FV(P)` *)
+```
+
+* (fun y -> x + y)[x -> 2] = (fun y -> 2 + y)
+* (fun y -> x)[x -> 8] = (fun y -> 8)
+
+```
+(* Substituting `x` for `P` in a function expression `fun y -> Q` where `y` is a free variable of `P`
+  requires a substitution of `y` for a fresh variable `z` before a substitution in `Q`.*)
+(fun y -> Q)[x -> P] = fun z -> Q[y -> z][x -> P]
+(* where `x` and `y` are different variables, `y` is in `FV(P)`, and `z` is a fresh variable *)
+```
+
+* (fun y -> 3)[x -> y] = (fun z -> 3)
+* (fun y -> x)[x -> y] = (fun z -> y)
+* (fun y -> y)[x -> y] = (fun z -> z)
+* (fun y -> x + y)[x -> y] = (fun z -> y + z)
+
+```
+(* Substituting `x` for `P` in a let expression `let x = Q in R` results in a substitution in Q.*)
+(let x = Q in R)[x -> P] = let x = Q[x -> P] in R
+```
+
+* (let x = 2 in 3)[x→3] = let x = 2 in 3
+* (let x = x + 1 in 3)[x→3] = let x = 3 + 1 in 3
+* (let x = x + 1 in x)[x→3] = let x = 3 + 1 in x
+* (let x = x + 1 in x)[x→y] = let x = y + 1 in x
+
+```
+(* Substituting `x` for `P` in a let expression `let y = Q in R` where `y`
+ is not a free variable of `P` results in a substitution in both `Q` and `R`.*)
+(let y = Q in R)[x→P] = let y = Q[x→P] in R[x→P]
+(* where `x` and `y` are different variables and `y` is not in `FV(P)` *)
+```
+
+* (let y = 2 in 3)[x→3] = let y = 2 in 3
+* (let y = x + 1 in y)[x→3] = let y = 3 + 1 in y
+* (let y = x + 1 in x + y)[x→3] = let y = 3 + 1 in 3 + y
+* (let y = x + 1 in x + y)[x→z] = let y = z + 1 in z + y
+
+```
+(* Substituting `x` for `P` in a let expression `let y = Q in R` where `y` is a free variable of `P` results
+ in a substitution in both `Q` and `R`, but `R` first must have a substitution of `y` for a fresh variable `z`.*)
+(let y = Q in R)[x→P] = let z = Q[x→P] in R[y→z][x→P]
+(* where `x` and `y` are different variables, `y` is in `FV(P)`, and `z` is a fresh variable *)
+```
+
+* (let y = 2 in 3)[x→y] = let z = 2 in 3
+* (let y = 2 in y)[x→y] = let z = 2 in z
+* (let y = x + 1 in y)[x→y] = let z = y + 1 in z
+* (let y = x + 1 in x + y)[x→y] = let z = y + 1 in y + z
+
+## Evaluation
+
+```
+(* The evaluation of a number n is just that number n. *)
+n ⇓ n
+```
+
+* 5 ⇓ 5
+* 1 ⇓ 1
+
+
+```
+(* The evaluation of `P + Q` involves evaluating P to a value, evaluating Q to a value, and taking their sum. *)
+P + Q ⇓
+      | P ⇓ m
+      | Q ⇓ n
+      ⇓ m + n
+```
+
+* 2 + 8 ⇓ 10
+* 5 + 1 ⇓ 6
+
+
+```
+(* The evaluation of `let x = D in B` involves evaluating D to a value v_D.
+   Then, we actually need to perform the substitution, replacing all free occurrences of `x` in `B`
+   with `that value `v_D` until we get a new value `v_B`.
+*)
+let x = D in B ⇓
+               | D ⇓ v_D
+               | B[x -> v_D] ⇓ v_B
+               ⇓ v_B
+```
+
+```
+let x = 2 + 8 in x + 5 ⇓
+                       | 2 + 8 ⇓
+                               | 2 ⇓ 2
+                               | 8 ⇓ 8
+                               ⇓ 10
+                       | 10 + 5 ⇓
+                                | 10 ⇓ 10
+                                | 5 ⇓ 5
+                                ⇓ 15
+                       ⇓ 15
+```
+
+```
+(* The evaluation of a function `fun x -> B` is just the function itself. *)
+fun x -> B ⇓ fun x -> B
+```
+
+* (fun x -> 10) ⇓  (fun x -> 10)
+
+```
+(* The evaluation of a function application `P Q` involves evaluating `P` to a function `fun x -> B`.
+   From there, the argument of the function `Q` must be evaluated to a value `v_Q`.
+   Then, we take the body of the function `B`, and substitute `x` with that value `v_Q`, and evaluate that.
+*)
+
+P Q ⇓
+    | P ⇓ fun x -> B
+    | Q ⇓ v_Q
+    | B[x -> v_Q] ⇓ v_B
+    ⇓ v_B
+```
+
+```
+(fun x -> x + 4) (1 + 2) ⇓
+                         | (fun x -> x + 3) ⇓ (fun x -> x + 3)
+                         | 1 + 2 ⇓
+                                 | 1 ⇓ 1
+                                 | 2 ⇓ 2
+                                 ⇓ 3
+                         | 3 + 4 ⇓
+                                 | 3 ⇓ 3
+                                 | 4 ⇓ 4
+                                 ⇓ 7
+                         ⇓ 7
+```
+
 ---
 
 The solutions to all of the above exercises will be available on Saturday at noon to give you some time to work through the solutions in preparation for the midterm.
