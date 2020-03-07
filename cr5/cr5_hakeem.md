@@ -12,7 +12,7 @@ hangulu@college.harvard.edu
 - Design and style will matter on the midterm.
 - Practice writing code by hand.
 - Answer questions in the order that makes most sense to you -- not necessarily sequentially. If you're stuck on a question, move on and do it later.
-- Everything from the first half of the class (up to Lab 10) is fair game for the exam.
+- Everything from the first half of the class (up to Lab 8) is fair game for the exam.
 - Redo the labs.
 
 ---
