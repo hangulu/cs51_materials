@@ -25,7 +25,7 @@ let rec sum (lst : int list) : int =
   | hd :: tl -> hd + sum tl ;;
 ```
 
-As noted in Lab 13, each call of `sum tl` is suspended until we reach the end of the list. At that point, the stack finally unwinds and the expression is evaluated. One way of addressing this problem is with **tail recursion**.
+As noted in Lab 13, each call of `length tl` is suspended until we reach the end of the list. At that point, the stack finally unwinds and the expression is evaluated. One way of addressing this problem is with **tail recursion**.
 
 Tail recursive functions **have the recursive invocation as the result of the invoking call (that is, the final computation to find a result is the recursive call)**.
 
@@ -104,6 +104,20 @@ Which of the following evaluate to true?
 10. `!(!c) = !b`
 11. `!(!c) == !b`
 
+Solutions:
+
+1. true
+2. false
+3. true
+4. true
+5. false
+6. true
+7. true
+8. true
+9. false
+10. true
+11. true
+
 ___
 #### Remembering Remember
 
@@ -162,6 +176,9 @@ ___
 
 Why does this work?
 
+Solution:
+See below.
+
 ___
 
 This works because the value `remember` is defined by a let statement, and thus follows the rules for substitution and evaluation we learned a few weeks ago. By those rules, we substitute the value `memory` into the anonymous function once, then `remember` gets evaluated to be that anonymous function. Therefore, the line `let memory = ref ""` is only evaluated once, but the anonymous function gets to keep using the ref.
@@ -205,6 +222,10 @@ ___
 **Exercise 3**:
 
 What are the advantages and disadvantages of DFS and BFS? When would you want to use one over the other?
+
+DFS is best used when you'd like to explore down an entire tree, or through an entire singular path in a graph, before exploring other possible paths to the goal. This is often useful for being able to backtrack and detect cycles in a graph.
+
+On the other hand, BFS explores the tree/graph layer by layer, looking at vertices closer to the source first. This is imperative when looking for the shortest possible path to the goal, or trying to find the nearest manifestation of the goal when there are several possible goals in the graph.
 
 ___
 
