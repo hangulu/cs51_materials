@@ -99,13 +99,19 @@ class ['a] stack init =
 let s = new stack 5 ;;
 ```
 
+1. Type annotation is explicitly required in the object-oriented version, but that type annotation can be polymorphic. This is in constrast to the functor, which requires a parameterization with another module to be polymorphic.
+
+2. At least in this implementation, a module-based stack is immutable, whereas an class-based stack is mutable.
+
+3. Types cannot be declared within a class – we’re stuck leaving the implementation of the object-based stack exposed to the client.
+
 **Exercise 2**: Below is the implementation of a `course` class. Change that implementation to modify the course's title and professor.
 
 ```ocaml
 class course (t : string) (p : string) =
   object
     val title = t
-    val professor = p
+    val motto = p
     method title : string = title
     method professor : string = professor
   end ;;
@@ -114,7 +120,15 @@ class course (t : string) (p : string) =
 ```ocaml
 class course (t : string) (p : string) =
   object
+    val mutable title = t
+    val mutable professor = p
+    method title : string = title
+    method professor : string = professor
 
+    method update_title (t : string) : unit =
+      title <- t
+    method update_prof = (p : string) : unit =
+      professor <- p
   end ;;
 ```
 
@@ -153,7 +167,10 @@ Note that to modify the `say` method, you need to use the `method!` keyword inst
 ```ocaml
 class detailed_course (t : string) (p : string) (n : int) =
   object
-
+    inherit course t p as super
+    val mutable num_students = n
+    method update_num (n : int) : unit =
+      num_students <- n
   end ;;
 ```
 
@@ -205,17 +222,32 @@ In inheritance, `a` has not only inherited the signature, but has inherited the 
 Think about which fields should be mutable. If fields should be mutable, create methods to mutate them.
 
 ```ocaml
-class zombie =
-  object
+class zombie (n: string) (brains: int) (fast : bool) (undead : bool) =
+object
+  val name = n
+  val mutable brain_count = brains
+  val fast = fast
+  val mutable undead = undead
 
-  end ;;
+  method get_name = name
+  method get_brain_count = brain_count
+  method get_speed =
+    if fast then "fast" else "slow"
+  method get_undead =
+    if undead then "undead" else "dead"
+
+  method eat_brain : unit =
+    brain_count <- brain_count + 1
+  method be_killed : unit =
+    undead <- False
+end ;;
 ```
 
 **Exercise 5**: Write a function that kills (makes an undead zombie dead) zombies if their brain count is higher than 3.
 
 ```ocaml
-let zombie_slayer =
-  failwith "zombie_slayer not yet implemented" ;;
+let zombie_slayer zombie =
+  if zombie#get_brain_count > 3 then zombie#be_killed else () ;;
 ```
 
 ---
